@@ -1,0 +1,66 @@
+<body>
+
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <div class="ham">
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                    <div class="img">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="sidebar">
+            <div class="profile">
+                <img src="img/admin.png">
+            </div>
+            <ul>
+                <li>
+                    <a href="/update-profil" class="active">
+                        <span class="item">Update Profil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/registrasi">
+                        <span class="item">Registrasi Penduduk</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/search">
+                        <span class="item">Cari Penduduk</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/kelola-keuangan">
+                        <span class="item">Kelola Keuangan</span>
+                    </a>
+                <li>
+                    <a href="/pemakaian-air">
+                        <span class="item">Input Pemakaian Air</span>
+                    </a>
+                </li>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="item">Kelola Pengumuman</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function () {
+            document.querySelector("body").classList.toggle("active");
+        })
+    </script>
+</body>
+
+</html>

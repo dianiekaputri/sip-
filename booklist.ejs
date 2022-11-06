@@ -1,0 +1,70 @@
+<%- include('inc/header.ejs') -%>
+    <%- include('inc/navbar.ejs') -%>
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <h1 class="h3 mb-0 text-gray-800">Data Penduduk</h1>
+            </div>
+
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Tabel Data Penduduk</h6>
+                </div>
+                <div class="card-body">
+                    <a class="btn btn-primary" href="<%= url %>penduduk/add">tambah</a>
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>NIK/KTP</th>
+                                    <th>No. Kartu Keluarga</th>
+                                    <th>Nama Lengkap</th>
+                                    <th>Email</th>
+                                    <th>Kontak</th>
+
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            </tfoot>
+                            <tbody>
+                                <% data.forEach(item => { %>
+                                    <tr>
+                                        <td>
+                                            <%= item.nik %>
+                                        </td>
+                                        <td>
+                                            <%= item.nokk %>
+                                        </td>
+                                        <td>
+                                            <%= item.name %>
+                                        </td>
+                                        <td>
+                                            <%= item.email %>
+                                        </td>
+                                        <td>
+                                            <%= item.telp %>
+                                        </td>
+
+                                        <td class="text-center">
+                                            <a href="<%= url %>penduduk/edit/<%= item.id %>">
+                                                <i class="fas fa-solid fa-pen"></i>
+                                            </a>
+                                            <a href="<%= url %>penduduk/delete/<%= item.id %>">
+                                                <i class="fas fa-solid fa-trash"></i>
+                                            </a>
+                                        </td>
+
+                                    </tr>
+                                    <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- /.container-fluid -->
+            <%- include('inc/footer.ejs') -%>
